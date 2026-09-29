@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>צור קשר | Ronen Zadok – Legacy Studio</title>
+<meta name="description" content="צרו קשר עם Legacy Studio – וואטסאפ, טלפון ומייל. הזמנות אישיות, הזמנות קבוצתיות ואיסוף עצמי ברמת גן.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0a09; --bg2:#141210; --card:#1a1714; --line:#2c2620;
+  --gold:#c9a36a; --gold-2:#e2c48f; --bronze:#a67c4e;
+  --text:#ece6dc; --muted:#a39a8d;
+  --maxw:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Heebo',system-ui,sans-serif;line-height:1.75;font-size:17px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+/* ---------- Logo ---------- */
+.logo{display:inline-block;line-height:0}
+.logo svg{width:190px;height:auto;display:block}
+.logo.lg svg{width:min(400px,80vw);margin:0 auto}
+footer .logo svg{width:170px}
+
+/* ---------- Header ---------- */
+header{position:sticky;top:0;z-index:20;background:rgba(11,10,9,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:92px;gap:24px}
+.nav ul{display:flex;gap:38px;list-style:none;font-size:16px}
+.nav ul a{color:#d9d2c6;padding:6px 0;border-bottom:1px solid transparent;transition:.2s}
+.nav ul a:hover{color:var(--gold-2)}
+.nav ul a.active{color:var(--gold-2);border-bottom-color:var(--gold)}
+.nav .wa{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--bronze);color:var(--gold-2);padding:9px 18px;border-radius:4px;font-size:15px;transition:.2s}
+.nav .wa:hover{background:var(--gold);color:#16120d}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 30px;border-radius:4px;font-weight:500;font-size:16px;transition:.2s;cursor:pointer}
+.btn-gold{background:linear-gradient(180deg,#8a6a43,#6d5233);color:#f6ecdc;border:1px solid #a88256}
+.btn-gold:hover{background:linear-gradient(180deg,#a07b4e,#7d5e3a)}
+.btn-ghost{border:1px solid var(--bronze);color:var(--gold-2)}
+.btn-ghost:hover{background:rgba(201,163,106,.1)}
+.btn svg{width:16px;height:16px}
+
+/* ---------- Section heads ---------- */
+.eyebrow{color:var(--gold);font-size:15px;letter-spacing:.08em;margin-bottom:10px;display:block}
+h1,h2{font-weight:700;line-height:1.2;color:#f5efe6}
+h2{font-size:clamp(30px,4vw,44px)}
+.divider{display:flex;align-items:center;justify-content:center;gap:14px;margin:18px auto 0;width:220px;color:var(--gold)}
+.divider::before,.divider::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--bronze),transparent)}
+.divider span{font-size:11px}
+.center{text-align:center}
+section{padding:96px 0}
+
+
+button.btn{font-family:inherit;border-style:solid}
+button.btn-ghost{background:transparent}
+.phead{padding:72px 0 56px;text-align:center;background:radial-gradient(ellipse at 50% 0%,#1d1813 0%,var(--bg) 70%);border-bottom:1px solid var(--line)}
+.phead h1{font-size:clamp(38px,5.4vw,62px)}
+.phead h1 em{font-style:normal;color:var(--gold)}
+.phead p{max-width:600px;margin:22px auto 0;color:#cfc7ba;font-size:18px}
+.crumbs{font-size:14px;color:var(--muted);margin-bottom:16px}
+.crumbs a:hover{color:var(--gold-2)}
+
+/* channels */
+.ch{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.chan{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;padding:40px 26px 32px;background:var(--card);border:1px solid var(--line);border-radius:12px;transition:.25s}
+.chan:hover{border-color:#6a5238;transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.chan .ic{width:74px;height:74px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--bronze);color:var(--gold-2);background:radial-gradient(circle at 50% 35%,#2a2119,#15120f);margin-bottom:8px}
+.chan .ic svg{width:32px;height:32px}
+.chan.wa .ic{border-color:#2f8f5b;color:#3ddc84}
+.chan h2{font-size:24px}
+.chan .val{font-size:18px;color:var(--gold-2);direction:ltr;unicode-bidi:isolate;word-break:break-all}
+.chan p{color:var(--muted);font-size:15px;min-height:46px}
+.chan .btn{margin-top:10px;width:100%;justify-content:center}
+.btn-wa{background:#1f8f55;border:1px solid #2aa865;color:#fff}
+.btn-wa:hover{background:#25a562}
+.tag{position:absolute;top:16px;right:16px;font-size:12px;padding:3px 10px;border-radius:20px;background:#1d2f24;color:#7fe0a8;border:1px solid #2d5a40}
+.copybtn{background:none;border:0;color:var(--muted);font-size:13.5px;cursor:pointer;font-family:inherit;text-decoration:underline;text-underline-offset:3px}
+.copybtn:hover{color:var(--gold-2)}
+
+/* quick topics */
+.quick{margin-top:64px;text-align:center}
+.quick h3{font-size:26px;color:#f5efe6}
+.quick .sub{color:var(--muted);margin-top:6px}
+.chips{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:26px}
+.chip{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border:1px solid var(--line);border-radius:40px;background:#16130f;color:#e8dcc8;font-size:15.5px;transition:.2s}
+.chip:hover{border-color:#2aa865;color:#fff;background:#172219}
+.chip svg{width:18px;height:18px;color:#3ddc84}
+
+/* form + info */
+.two{display:grid;grid-template-columns:1.25fr 1fr;gap:28px;margin-top:72px;align-items:start}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:34px}
+.panel h3{font-size:24px;color:#f5efe6;margin-bottom:6px}
+.panel .sub{color:var(--muted);font-size:15px;margin-bottom:22px}
+.f{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.f .full{grid-column:1/-1}
+label{display:block;font-size:14px;color:#cfc7ba;margin-bottom:6px}
+input,select,textarea{width:100%;background:#100e0c;border:1px solid #3a3027;border-radius:6px;color:var(--text);font:inherit;font-size:16px;padding:12px 14px;transition:.2s}
+textarea{min-height:120px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,163,106,.15)}
+select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--gold) 50%),linear-gradient(135deg,var(--gold) 50%,transparent 50%);background-position:18px 50%,12px 50%;background-size:6px 6px;background-repeat:no-repeat}
+.send{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap}
+.send .btn{flex:1;justify-content:center;min-width:180px}
+.err{color:#e08a7a;font-size:14px;margin-top:10px;min-height:20px}
+.info{display:grid;gap:18px}
+.row-i{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start}
+.row-i .i{width:44px;height:44px;border-radius:50%;border:1px solid var(--bronze);display:grid;place-items:center;color:var(--gold-2)}
+.row-i .i svg{width:20px;height:20px}
+.row-i b{display:block;color:var(--gold-2);font-weight:500}
+.row-i span{color:#c7bfb2;font-size:15.5px;line-height:1.6}
+.faq{margin-top:10px;border-top:1px solid var(--line);padding-top:18px}
+details{border-bottom:1px solid var(--line);padding:12px 0}
+summary{cursor:pointer;color:#ece6dc;font-weight:500;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--gold);font-size:20px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:#c7bfb2;font-size:15px;margin-top:8px}
+.toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(20px);background:#1f1a15;border:1px solid var(--bronze);color:var(--gold-2);padding:10px 20px;border-radius:30px;opacity:0;transition:.3s;z-index:60;font-size:15px}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+/* ---------- Trust ---------- */
+.trust{border-top:1px solid var(--line);padding:40px 0}
+.trust .row{display:grid;grid-template-columns:repeat(4,1fr)}
+.trust .t{display:flex;gap:14px;align-items:center;justify-content:center;padding:0 12px;border-inline-start:1px solid var(--line)}
+.trust .t:first-child{border-inline-start:0}
+.trust svg{width:34px;height:34px;stroke:var(--gold);fill:none;stroke-width:1.3;flex:none}
+.trust b{display:block;color:var(--gold-2);font-size:15px;font-weight:500}
+.trust span{color:var(--muted);font-size:14px}
+
+/* ---------- Footer ---------- */
+footer{border-top:1px solid var(--line);background:#080706;padding:30px 0}
+footer .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer .links{display:flex;gap:22px;font-size:14px;color:var(--muted);flex-wrap:wrap}
+footer .links a:hover{color:var(--gold-2)}
+footer .contact{display:flex;gap:18px;align-items:center;color:#ddd4c6;font-size:15px}
+footer .contact a{display:inline-flex;align-items:center;gap:8px}
+footer .contact svg{width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:1.5}
+.copy{text-align:center;color:#6f675c;font-size:13px;margin-top:18px;width:100%}
+
+/* ---------- Floating WhatsApp ---------- */
+.fab{position:fixed;left:22px;bottom:22px;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.45);z-index:30;transition:.2s}
+.fab:hover{transform:scale(1.06)}
+.fab svg{width:30px;height:30px;fill:#fff}
+
+/* ---------- Responsive ---------- */
+@media (max-width:900px){
+  .ch{grid-template-columns:1fr;max-width:460px;margin-inline:auto}
+  .two{grid-template-columns:1fr}
+  .panel{padding:24px}
+  .nav{height:auto;padding:14px 0;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px 18px}
+  .nav .wa{display:none}
+  .nav ul{gap:24px;font-size:15px}
+  .logo svg{width:160px}
+  .hero .wrap{grid-template-columns:1fr;min-height:0;padding-top:40px;padding-bottom:30px;text-align:center}
+  .hero p{margin-inline:auto}
+  .hero .img{order:-1}
+  .hero .img img{margin:0 auto;max-width:320px}
+  .patch-grid{grid-template-columns:1fr;gap:32px}
+  .patch-img{position:relative;top:0}
+  .values .row,.trust .row{grid-template-columns:repeat(2,1fr);row-gap:28px}
+  .val:nth-child(3),.trust .t:nth-child(3){border-inline-start:0}
+  .gallery{grid-template-columns:1fr;max-width:460px;margin-inline:auto}
+  section{padding:68px 0}
+  footer .wrap{flex-direction:column;text-align:center}
+  footer .links{justify-content:center}
+}
+@media (max-width:480px){
+  .f{grid-template-columns:1fr}
+  .chip{font-size:14.5px;padding:10px 16px}
+  .wrap{padding:0 16px}
+  .nav ul{gap:16px}
+  .story .body,.hero p,.sign p{font-size:17px}
+  .values .row,.trust .row{grid-template-columns:1fr}
+  .val,.trust .t{border-inline-start:0!important}
+  .trust .t{justify-content:flex-start}
+  .btn{width:100%;justify-content:center}
+}
+.igband{margin-top:22px;display:flex;align-items:center;gap:18px;padding:20px 26px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(100deg,#1c1612,#15110e 55%,#1d1419);transition:.25s}
+.igband:hover{border-color:#7a4a5c}
+.igi{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;color:#fff;background:linear-gradient(45deg,#f09433,#dc2743 50%,#bc1888);flex:none}
+.igi svg{width:26px;height:26px}
+.igt{flex:1}.igt b{display:block;color:#f5efe6;font-size:18px}.igt span{color:var(--muted);font-size:15px}
+@media (max-width:600px){.igband{flex-wrap:wrap}.igband .btn{width:100%;justify-content:center}}
+.logo.hdr{display:flex;align-items:center;gap:14px}
+.logo.hdr .shield{line-height:0}
+.logo.hdr .shield svg{width:auto;height:64px}
+@media (max-width:900px){.logo.hdr .shield svg{height:46px}.logo.hdr{gap:10px}}
+
+/* ---------- Top bar ---------- */
+header.sh{position:sticky;top:0;z-index:40;background:rgba(11,10,9,.9);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.sh-in{display:flex;align-items:center;justify-content:space-between;height:78px;gap:24px}
+.sh-logo{line-height:0;flex:none}
+.sh-logo svg{height:52px;width:auto;display:block}
+.sh-nav{flex:1;display:flex;justify-content:center}
+.sh-nav ul{display:flex;gap:36px;list-style:none;margin:0;padding:0}
+.sh-nav ul a{color:#d9d2c6;font-size:16px;padding:6px 0;border-bottom:1px solid transparent;transition:.2s}
+.sh-nav ul a:hover{color:var(--gold-2)}
+.sh-nav ul a.active{color:var(--gold-2);border-bottom-color:var(--gold)}
+.sh-act{display:flex;align-items:center;gap:12px;flex:none}
+.sh-wa{width:42px;height:42px;border-radius:50%;border:1px solid var(--bronze);display:grid;place-items:center;color:var(--gold-2);transition:.2s}
+.sh-wa:hover{background:#1f8f55;border-color:#2aa865;color:#fff}
+.sh-cta{padding:10px 20px;font-size:15px}
+.sh-burger,.sh-m-cta{display:none}
+@media (max-width:900px){
+  .sh-in{height:64px}
+  .sh-logo svg{height:44px}
+  .sh-cta{display:none}
+  .sh-burger{display:flex;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;background:none;border:1px solid var(--line);border-radius:8px;cursor:pointer;padding:0 11px}
+  .sh-burger span{display:block;height:2px;background:var(--gold-2);border-radius:2px;transition:.25s}
+  header.sh.open .sh-burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  header.sh.open .sh-burger span:nth-child(2){opacity:0}
+  header.sh.open .sh-burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .sh-nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:#0d0c0a;border-bottom:1px solid var(--line);padding:6px 16px 20px;box-shadow:0 20px 40px rgba(0,0,0,.5)}
+  header.sh.open .sh-nav{display:flex}
+  .sh-nav ul{flex-direction:column;gap:0}
+  .sh-nav ul a{display:block;padding:15px 4px;font-size:17px;border-bottom:1px solid var(--line)}
+  .sh-nav ul a.active{border-bottom-color:var(--line)}
+  .sh-m-cta{display:grid;gap:10px;margin-top:18px}
+  .sh-m-cta .btn{width:100%;justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<header class="sh">
+  <div class="wrap sh-in">
+    <a href="index.html" class="sh-logo" aria-label="Legacy Studio – לדף הבית"><svg aria-hidden="true" focusable="false" viewBox="289 146 676 960"><path fill="#c9a06c" fill-rule="evenodd" d="M828.0 478.5 L821.5 479.0 L818.5 485.5 L812.0 491.0 L803.0 492.5 L769.0 481.0 L757.0 478.0 L741.0 475.5 L708.0 475.0 L686.5 478.0 L665.0 485.0 L655.0 490.0 L644.0 497.0 L628.0 511.5 L617.0 526.5 L612.0 536.0 L607.0 550.0 L604.0 568.0 L604.0 584.5 L606.0 596.5 L609.5 608.0 L618.0 624.0 L625.0 633.0 L636.0 644.0 L656.5 659.0 L667.5 665.5 L741.0 701.0 L758.0 711.5 L768.5 719.5 L777.5 728.5 L785.0 740.5 L789.5 755.0 L790.5 769.0 L788.0 786.0 L783.0 798.5 L775.0 810.5 L764.5 820.5 L754.0 827.5 L744.5 832.0 L735.5 835.0 L719.5 837.5 L704.5 837.5 L688.0 835.0 L672.5 830.0 L662.5 825.5 L647.0 815.5 L634.0 803.5 L625.5 793.0 L618.5 782.0 L610.0 764.0 L608.0 763.0 L602.5 763.5 L602.5 843.5 L607.5 843.5 L613.0 836.5 L618.0 833.5 L626.0 832.5 L664.0 844.5 L691.0 849.5 L714.5 850.5 L733.5 849.5 L747.0 847.5 L763.0 843.5 L774.5 839.5 L796.5 828.5 L808.0 820.5 L816.0 813.5 L824.0 805.0 L833.5 792.0 L840.5 778.5 L846.5 759.5 L848.5 746.0 L848.5 729.5 L846.5 716.5 L843.5 705.5 L837.5 691.5 L830.5 680.5 L821.5 669.5 L813.0 661.0 L790.5 644.5 L764.0 629.5 L706.0 601.0 L683.5 587.0 L670.5 575.0 L666.0 569.0 L660.5 557.5 L658.5 548.5 L659.5 531.0 L663.0 520.5 L670.5 508.5 L680.0 499.5 L693.5 492.0 L707.5 488.0 L721.0 487.0 L736.5 488.5 L747.0 491.0 L759.0 495.5 L769.5 501.0 L782.5 510.5 L796.0 524.5 L805.0 538.0 L814.0 557.5 L820.5 579.0 L828.0 579.5 L829.0 578.5 L829.0 479.5ZM595.5 359.0 L415.0 359.5 L415.5 369.5 L432.0 370.0 L441.0 371.5 L447.0 373.5 L455.5 378.5 L461.0 384.5 L464.0 390.0 L466.5 398.5 L467.5 407.0 L467.5 697.0 L466.5 705.0 L464.0 714.5 L460.0 721.5 L456.0 726.0 L450.0 730.5 L439.0 734.5 L428.0 736.0 L416.0 736.0 L416.0 747.5 L713.0 747.5 L715.0 744.0 L728.0 711.5 L725.0 709.5 L723.0 710.0 L711.5 718.5 L698.5 725.0 L688.0 728.5 L673.0 731.5 L652.0 733.0 L545.5 733.0 L544.5 732.0 L545.0 402.5 L548.5 389.0 L553.0 382.0 L557.0 378.0 L564.5 373.5 L573.0 371.0 L595.5 369.5ZM625.5 197.5 L341.5 294.0 L339.5 295.5 L339.0 719.0 L340.0 736.5 L344.5 762.0 L349.0 779.0 L358.0 803.0 L368.0 823.5 L379.5 843.0 L392.0 861.0 L413.0 886.5 L451.0 924.0 L478.0 946.5 L504.0 966.0 L535.0 987.5 L560.0 1003.5 L603.0 1028.5 L628.0 1041.5 L629.5 1041.5 L663.0 1023.5 L711.0 994.5 L757.5 962.5 L776.0 948.5 L802.5 926.5 L838.5 891.0 L865.0 858.0 L879.0 836.5 L886.5 823.0 L900.5 791.5 L905.0 778.0 L910.5 756.5 L913.5 737.0 L914.5 723.0 L914.5 297.0 L912.0 294.0 L648.0 204.0 L628.5 197.5ZM625.0 210.5 L628.5 210.5 L898.5 302.5 L901.0 303.5 L902.0 305.0 L902.0 724.5 L901.0 737.5 L898.0 755.5 L894.0 771.5 L887.0 792.5 L874.5 819.5 L864.0 837.5 L853.5 853.0 L840.0 870.5 L829.0 883.0 L800.5 911.5 L766.0 940.5 L719.5 974.0 L671.0 1004.5 L629.5 1027.5 L627.5 1027.5 L607.5 1017.0 L574.0 997.5 L515.5 959.0 L488.5 939.0 L464.0 919.0 L449.5 906.0 L426.0 882.5 L407.5 861.0 L391.5 839.0 L378.5 817.5 L370.5 801.5 L359.0 769.5 L354.5 750.5 L351.5 727.0 L351.5 304.5 L353.5 303.0ZM626.5 150.0 L392.5 227.5 L297.5 260.0 L293.0 262.5 L293.0 727.0 L295.5 750.5 L301.0 777.0 L308.0 800.5 L317.5 824.0 L329.5 848.0 L348.5 878.0 L361.5 895.5 L380.0 917.0 L403.5 941.0 L422.5 958.5 L448.5 980.5 L482.5 1007.0 L525.0 1037.5 L575.5 1071.0 L627.5 1102.5 L631.0 1102.5 L680.0 1072.0 L726.5 1040.5 L760.0 1016.5 L810.5 977.0 L844.0 947.5 L876.5 914.5 L901.5 883.5 L914.0 865.0 L926.0 844.5 L934.5 827.5 L943.0 807.5 L950.0 786.5 L955.0 767.0 L959.0 744.0 L960.5 727.5 L960.5 262.5 L959.0 261.0 L842.0 221.0ZM626.0 179.0 L857.5 256.5 L929.5 281.5 L932.0 284.0 L931.5 728.5 L929.5 747.0 L926.0 765.0 L922.5 778.5 L915.0 800.5 L900.0 833.0 L879.5 866.0 L857.5 894.0 L841.0 912.0 L821.5 931.0 L784.5 962.5 L732.0 1000.5 L677.0 1035.0 L629.0 1060.5 L625.5 1059.5 L603.0 1048.0 L569.5 1029.0 L535.5 1008.0 L500.5 984.0 L473.0 963.5 L444.5 940.0 L414.5 912.0 L399.0 895.5 L387.0 881.5 L367.0 854.0 L355.0 834.5 L343.5 811.5 L338.0 798.5 L330.5 776.0 L325.0 752.0 L322.0 728.0 L322.0 283.0 L324.0 281.5 L381.5 261.5Z"/></svg></a>
+    <nav class="sh-nav" id="sh-nav" aria-label="ניווט ראשי">
+      <ul><li><a href="index.html">דף הבית</a></li><li><a href="catalog.html">קטלוג</a></li><li><a href="about.html">אודות</a></li><li><a href="contact.html" class="active" aria-current="page">צור קשר</a></li></ul>
+      <div class="sh-m-cta">
+        <a class="btn btn-gold" href="catalog.html">לבחירת כובע <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></a>
+        <a class="btn btn-ghost" href="https://wa.me/972543373308" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg> דברו איתנו בוואטסאפ</a>
+      </div>
+    </nav>
+    <div class="sh-act">
+      <a class="sh-wa" href="https://wa.me/972543373308" target="_blank" rel="noopener" aria-label="וואטסאפ"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg></a>
+      <a class="btn btn-gold sh-cta" href="catalog.html">לבחירת כובע <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></a>
+      <button class="sh-burger" type="button" aria-expanded="false" aria-controls="sh-nav" aria-label="פתיחת תפריט"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="phead">
+    <div class="wrap">
+      <div class="crumbs"><a href="index.html">דף הבית</a> / צור קשר</div>
+      <span class="eyebrow">צור קשר</span>
+      <h1>נשמח <em>לדבר איתכם</em></h1>
+      <div class="divider"><span>✦</span></div>
+      <p>שאלה על דגם, הזמנה אישית או הזמנה ליחידה – בחרו את הדרך הנוחה לכם, ונחזור אליכם בהקדם.</p>
+    </div>
+  </section>
+
+  <section style="padding-top:64px">
+    <div class="wrap">
+      <div class="ch">
+        <div class="chan wa">
+          <span class="tag">הכי מהיר</span>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg></div>
+          <h2>וואטסאפ</h2>
+          <div class="val">054-3373308</div>
+          <p>שלחו הודעה ונחזור אליכם בהקדם.</p>
+          <a class="btn btn-wa" href="https://wa.me/972543373308?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%20Legacy%20Studio" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>שליחת הודעה בוואטסאפ</a>
+        </div>
+        <div class="chan">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg></div>
+          <h2>טלפון</h2>
+          <div class="val">054-3373308</div>
+          <p>מעדיפים לדבר? חייגו ישירות.</p>
+          <a class="btn btn-gold" href="tel:+972543373308"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>התקשרו עכשיו</a>
+          <button class="copybtn" type="button" data-copy="054-3373308">העתקת המספר</button>
+        </div>
+        <div class="chan">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
+          <h2>מייל</h2>
+          <div class="val">zadokronen@gmail.com</div>
+          <p>להצעות מחיר, הזמנות גדולות ופניות מפורטות.</p>
+          <a class="btn btn-ghost" href="mailto:zadokronen@gmail.com?subject=%D7%A4%D7%A0%D7%99%D7%99%D7%94%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%E2%80%93%20Legacy%20Studio"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>שליחת מייל</a>
+          <button class="copybtn" type="button" data-copy="zadokronen@gmail.com">העתקת כתובת המייל</button>
+        </div>
+      </div>
+
+
+      <a class="igband" href="https://www.instagram.com/ronentzadok/" target="_blank" rel="noopener">
+        <span class="igi"><svg fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".9"/></svg></span>
+        <span class="igt"><b>עקבו אחרינו באינסטגרם</b><span dir="ltr">@ronentzadok</span></span>
+        <span class="btn btn-ghost">לאינסטגרם</span>
+      </a>
+      <div class="quick">
+        <h3>פנייה מהירה בנושא</h3>
+        <p class="sub">לחיצה פותחת וואטסאפ עם הודעה מוכנה</p>
+        <div class="chips"><a class="chip" href="https://wa.me/972543373308?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%99%D7%A9%20%D7%9C%D7%99%20%D7%A9%D7%90%D7%9C%D7%94%20%D7%A2%D7%9C%20%D7%90%D7%97%D7%93%20%D7%9E%D7%93%D7%92%D7%9E%D7%99%20%D7%94%D7%9B%D7%95%D7%91%D7%A2%D7%99%D7%9D%20%D7%A9%D7%9C%20Legacy%20Studio" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>שאלה על דגם או צבע</a><a class="chip" href="https://wa.me/972543373308?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F/%D7%AA%20%D7%91%D7%94%D7%96%D7%9E%D7%A0%D7%94%20%D7%A7%D7%91%D7%95%D7%A6%D7%AA%D7%99%D7%AA%20%D7%A9%D7%9C%20%D7%9B%D7%95%D7%91%D7%A2%D7%99%20Legacy%20Studio" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>הזמנה ליחידה / קבוצה</a><a class="chip" href="https://wa.me/972543373308?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%91%D7%99%D7%A6%D7%A2%D7%AA%D7%99%20%D7%94%D7%96%D7%9E%D7%A0%D7%94%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%AA%D7%90%D7%9D%20%D7%90%D7%99%D7%A1%D7%95%D7%A3%20%D7%A2%D7%A6%D7%9E%D7%99" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>תיאום איסוף עצמי</a><a class="chip" href="https://wa.me/972543373308?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%99%D7%A9%20%D7%9C%D7%99%20%D7%A9%D7%90%D7%9C%D7%94%20%D7%9C%D7%92%D7%91%D7%99%20%D7%94%D7%96%D7%9E%D7%A0%D7%94%20%D7%A9%D7%91%D7%99%D7%A6%D7%A2%D7%AA%D7%99" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>שאלה על הזמנה קיימת</a></div>
+      </div>
+
+      <div class="two">
+        <div class="panel">
+          <h3>השאירו לנו הודעה</h3>
+          <p class="sub">מלאו את הפרטים ובחרו איך לשלוח – בוואטסאפ או במייל.</p>
+          <form id="cf" novalidate>
+            <div class="f">
+              <div><label for="n">שם מלא</label><input id="n" name="name" autocomplete="name" required></div>
+              <div><label for="p">טלפון</label><input id="p" name="phone" type="tel" inputmode="tel" autocomplete="tel" dir="ltr" style="text-align:right"></div>
+              <div class="full"><label for="t">נושא הפנייה</label>
+                <select id="t" name="topic">
+                  <option>שאלה על דגם או צבע</option>
+                  <option>הזמנה ליחידה / קבוצה</option>
+                  <option>תיאום איסוף עצמי</option>
+                  <option>שאלה על הזמנה קיימת</option>
+                  <option>אחר</option>
+                </select></div>
+              <div class="full"><label for="m">ההודעה שלכם</label><textarea id="m" name="message" required></textarea></div>
+            </div>
+            <div class="err" id="err" role="alert"></div>
+            <div class="send">
+              <button class="btn btn-wa" type="button" data-send="wa"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>שליחה בוואטסאפ</button>
+              <button class="btn btn-ghost" type="button" data-send="mail"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>שליחה במייל</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="panel info">
+          <h3>פרטים שימושיים</h3>
+          <div class="row-i"><div class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div><div><b>איסוף עצמי</b><span>ללא עלות, ברמת גן. את מועד האיסוף מתאמים איתנו לאחר ההזמנה.</span></div></div>
+          <div class="row-i"><div class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h12v10H2zM14 10h4l3 4v3h-7z"/><circle cx="6" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/></svg></div><div><b>זמני אספקה</b><span>משלוח עד הבית – עד 10 ימי עסקים · דגם שדורש ייצור – עד 30 ימי עסקים.</span></div></div>
+          <div class="row-i"><div class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.8"/><path d="M2.5 20c0-3.6 2.9-6.5 6.5-6.5s6.5 2.9 6.5 6.5M15 14c3.3-.4 6.5 1.8 6.5 5.5"/></svg></div><div><b>הזמנות ליחידות וקבוצות</b><span>מקבלים הזמנות בהתאמה אישית בכמויות גדולות.</span></div></div>
+
+          <div class="faq">
+            <details><summary>האם אפשר להזמין כובע עם פאץ' של היחידה שלנו?</summary><p>כן. אנחנו מקבלים הזמנות בהתאמה אישית בכמויות גדולות – ספרו לנו על היחידה או הקבוצה ונחזור אליכם עם פרטים.</p></details>
+            <details><summary>כמה זמן לוקח לקבל את הכובע?</summary><p>במשלוח עד הבית – עד 10 ימי עסקים. דגם שצריך לייצר – עד 30 ימי עסקים.</p></details>
+            <details><summary>איך מזמינים?</summary><p>בוחרים דגם ב<a href="catalog.html" style="color:var(--gold-2);border-bottom:1px solid var(--bronze)">קטלוג</a> ולוחצים "להזמנה", או פונים אלינו ישירות בוואטסאפ.</p></details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="index.html" class="logo" aria-label="Ronen Zadok – Legacy Studio">
+      <svg viewBox="30 12 336 80" aria-hidden="true" focusable="false"><path fill="#c9a06c" fill-rule="evenodd" d="M252.75 62.38 L252.62 62.00 L252.12 61.62 L240.88 61.50 L238.88 62.00 L236.12 62.12 L233.00 62.88 L227.12 62.88 L225.25 63.38 L222.62 63.62 L220.50 64.25 L215.62 64.88 L213.25 65.75 L209.25 66.25 L208.50 66.50 L208.00 67.00 L207.75 67.75 L208.38 68.38 L209.25 68.38 L211.50 67.62 L214.00 67.50 L216.50 66.62 L220.12 66.38 L222.25 65.88 L224.50 65.62 L226.62 64.88 L230.12 64.50 L236.88 63.00 L247.62 62.88 L252.12 63.25 L252.62 62.88ZM101.50 49.25 L101.75 49.62 L102.75 49.88 L103.88 49.38 L104.00 49.00 L103.38 48.62 L102.25 48.62 L101.75 48.88ZM100.38 49.25 L99.38 48.62 L97.00 49.00 L95.25 48.25 L94.62 47.62 L95.38 45.88 L95.25 44.38 L94.50 43.75 L93.12 43.38 L91.38 43.50 L90.25 44.50 L89.12 45.12 L87.12 47.62 L85.50 49.25 L85.25 50.25 L84.25 51.50 L83.75 52.75 L83.75 56.62 L84.75 57.88 L85.62 58.25 L86.75 58.38 L89.12 58.00 L91.38 56.50 L92.38 55.25 L93.25 54.50 L93.75 53.75 L94.00 52.50 L94.50 51.88 L96.88 50.25 L99.25 50.25 L100.00 49.88ZM89.88 48.25 L90.38 48.50 L92.12 50.25 L92.38 50.75 L92.25 51.50 L91.38 53.12 L88.50 56.12 L87.62 56.50 L86.38 56.50 L85.62 55.50 L85.62 54.00 L86.00 52.38 L88.00 49.50 L88.88 48.62 L89.50 48.25ZM91.88 45.62 L92.38 45.25 L93.00 45.25 L93.38 45.50 L94.25 47.12 L94.25 47.50 L93.88 47.75 L92.75 47.62 L91.75 46.50ZM178.38 48.50 L178.00 48.00 L176.88 48.00 L175.25 49.62 L174.12 50.12 L172.88 51.12 L171.62 51.62 L170.50 52.75 L168.75 53.38 L167.62 54.12 L167.12 54.12 L166.25 53.38 L166.12 52.12 L166.50 51.00 L166.62 49.00 L168.00 46.50 L168.12 45.00 L167.75 43.62 L167.25 43.12 L166.38 42.75 L165.75 42.75 L163.75 43.50 L162.25 44.75 L161.50 45.12 L160.50 46.25 L159.00 47.00 L156.38 49.12 L155.88 49.38 L155.00 49.38 L154.88 48.75 L155.50 47.25 L158.38 44.25 L158.62 43.75 L158.75 42.75 L158.50 42.25 L158.00 41.88 L157.38 41.75 L156.62 42.12 L155.12 44.12 L154.50 45.62 L153.00 46.88 L152.25 48.00 L150.12 48.50 L149.62 48.75 L148.62 49.75 L146.88 50.50 L146.00 51.25 L144.25 51.75 L142.88 53.00 L140.25 53.62 L138.88 54.62 L136.12 55.12 L134.38 55.12 L133.00 54.75 L132.38 54.00 L132.25 53.00 L132.62 52.12 L133.75 50.88 L136.50 50.12 L138.00 49.12 L139.62 48.38 L140.38 47.62 L140.62 47.12 L141.62 46.12 L142.38 44.62 L142.38 43.38 L141.75 42.25 L140.88 41.88 L138.88 41.88 L137.50 42.38 L136.00 43.38 L134.88 44.62 L134.12 45.00 L132.38 47.12 L129.75 49.75 L128.12 50.25 L126.75 51.12 L124.88 51.88 L123.38 53.00 L121.62 53.62 L120.88 53.62 L120.12 53.00 L120.00 52.00 L121.00 50.50 L121.50 47.88 L122.38 46.12 L122.38 45.25 L121.88 44.00 L121.00 43.12 L120.25 42.75 L119.25 42.75 L117.12 43.62 L116.00 44.62 L114.88 45.25 L112.25 47.88 L111.00 48.62 L109.75 49.88 L108.88 50.25 L107.88 50.12 L108.25 48.88 L110.25 46.50 L111.62 45.25 L112.75 43.38 L112.75 42.50 L112.38 42.12 L111.62 42.00 L110.25 42.50 L109.00 44.50 L105.38 47.62 L104.62 49.00 L105.38 50.12 L105.50 51.12 L105.12 52.12 L103.25 54.50 L102.88 55.75 L103.50 56.88 L104.00 57.12 L104.62 57.00 L107.75 53.62 L108.62 53.12 L111.75 50.25 L112.50 49.88 L115.25 47.25 L116.62 46.75 L118.25 45.50 L118.75 45.50 L119.50 46.12 L119.50 46.75 L118.62 48.62 L118.00 50.62 L117.50 53.25 L117.62 54.50 L118.38 55.50 L119.12 55.88 L120.75 55.88 L122.12 55.25 L124.25 54.62 L125.25 53.62 L126.88 53.12 L128.25 51.88 L129.38 51.88 L129.88 52.12 L130.50 53.00 L130.50 54.50 L131.00 56.12 L132.12 57.00 L133.75 57.38 L135.00 57.25 L136.25 56.75 L138.50 56.62 L140.75 55.25 L142.75 54.62 L143.88 53.62 L145.75 52.88 L146.75 51.88 L148.25 51.38 L150.00 50.00 L150.75 50.00 L151.25 50.25 L151.62 51.00 L151.25 52.12 L150.38 53.25 L149.50 55.12 L149.62 56.50 L150.12 57.00 L150.88 57.12 L151.50 56.62 L152.00 55.62 L153.50 54.38 L155.62 52.00 L156.12 51.75 L157.62 50.12 L158.25 49.88 L159.50 48.75 L160.38 48.38 L161.50 47.25 L162.50 46.75 L163.62 45.50 L164.75 45.38 L165.25 45.62 L165.75 46.38 L165.75 46.75 L164.62 48.50 L164.12 51.62 L163.38 53.00 L163.25 53.75 L163.50 54.50 L164.75 56.00 L165.38 56.38 L166.62 56.38 L167.50 56.00 L168.50 55.25 L169.88 55.00 L170.62 54.62 L171.62 53.50 L173.25 52.88 L174.25 51.88 L175.25 51.38 L176.38 50.00 L177.75 49.50 L178.25 49.00ZM140.00 44.00 L140.12 44.75 L139.88 45.25 L136.62 48.12 L135.50 48.62 L134.75 48.62 L134.38 48.25 L134.38 47.50 L135.62 46.50 L136.75 45.25 L137.38 44.88 L138.12 44.00 L139.00 43.50ZM364.38 45.75 L363.88 45.38 L362.75 45.50 L361.62 46.62 L358.88 48.62 L358.00 49.50 L356.88 50.00 L355.38 51.25 L353.62 52.00 L352.38 53.00 L350.50 53.50 L348.50 54.62 L345.50 55.00 L343.00 54.88 L341.25 54.12 L340.25 52.75 L340.38 51.62 L341.75 50.38 L343.00 48.88 L344.12 48.25 L347.25 45.50 L349.25 45.00 L350.00 44.62 L350.75 44.00 L351.25 43.25 L351.25 42.50 L350.62 41.88 L348.62 41.88 L347.00 43.12 L345.38 43.88 L344.00 45.00 L342.88 46.25 L340.25 47.88 L339.88 47.88 L339.62 47.62 L339.62 47.12 L341.00 44.12 L341.88 43.12 L342.62 41.50 L343.38 40.50 L344.00 39.00 L344.75 38.12 L345.25 36.50 L345.62 35.75 L346.50 34.75 L347.12 33.00 L348.25 31.62 L348.88 30.00 L349.75 29.00 L350.38 27.50 L351.50 26.00 L351.88 25.00 L353.00 23.50 L353.75 21.88 L356.25 18.50 L356.25 16.88 L355.88 16.50 L355.12 16.50 L353.38 18.25 L352.62 19.62 L351.62 20.75 L351.00 22.12 L350.12 23.25 L349.38 25.00 L348.38 26.25 L347.75 27.88 L346.88 28.88 L346.25 30.50 L345.12 31.88 L344.38 33.88 L343.50 34.88 L341.25 39.50 L340.12 40.75 L339.75 41.75 L338.62 43.12 L338.25 44.25 L336.12 46.88 L334.50 48.25 L332.00 48.50 L330.88 49.00 L329.88 49.75 L326.38 50.12 L325.88 49.75 L325.50 49.00 L325.50 47.38 L325.88 46.25 L325.75 44.38 L325.00 43.50 L323.38 42.88 L322.88 43.00 L319.25 45.00 L316.88 47.38 L316.00 48.50 L315.25 50.00 L312.62 52.75 L311.38 53.25 L310.00 54.38 L308.25 55.00 L307.00 56.12 L305.12 56.62 L303.62 57.50 L302.50 57.25 L300.75 55.75 L300.50 55.00 L300.62 50.38 L301.12 48.38 L302.25 46.00 L303.62 44.00 L304.75 42.75 L305.25 41.75 L306.38 40.50 L306.75 39.75 L309.50 37.00 L310.00 36.00 L311.25 34.88 L311.62 34.12 L314.25 31.12 L315.00 29.38 L316.12 28.12 L316.38 27.50 L317.88 25.50 L318.12 24.75 L319.12 23.62 L319.88 21.38 L320.88 20.25 L321.00 18.25 L320.50 17.12 L319.88 16.50 L319.12 16.25 L318.25 16.25 L316.88 16.88 L315.38 18.50 L314.25 19.38 L313.88 20.12 L312.75 21.12 L311.25 23.12 L310.50 24.50 L309.88 25.12 L309.00 26.88 L308.00 28.00 L307.50 29.88 L306.38 31.12 L305.62 32.88 L304.88 33.88 L304.25 35.62 L303.38 36.75 L303.00 37.75 L302.75 39.38 L301.62 40.75 L300.75 42.88 L300.00 43.62 L298.75 43.75 L297.00 42.75 L295.38 42.75 L294.50 43.12 L292.00 43.50 L288.75 45.88 L283.12 51.62 L281.12 52.12 L280.12 53.12 L276.88 55.25 L275.88 56.25 L275.00 56.25 L274.00 55.50 L273.50 54.50 L273.38 52.88 L273.75 50.88 L273.25 49.38 L273.88 47.88 L275.12 46.38 L275.50 45.62 L275.50 44.25 L274.62 43.62 L272.00 43.75 L269.88 43.00 L268.25 43.12 L266.88 43.62 L265.50 44.75 L263.62 45.25 L262.38 46.50 L261.62 46.88 L261.00 47.50 L259.62 49.50 L258.38 50.75 L257.62 52.38 L256.88 53.25 L256.38 54.50 L256.38 55.38 L256.88 56.62 L257.88 57.88 L258.75 58.25 L260.38 58.12 L263.88 56.25 L265.62 54.88 L266.88 53.50 L269.00 51.88 L270.12 50.62 L270.62 50.38 L271.38 50.38 L271.75 50.75 L271.75 51.12 L271.12 52.25 L271.00 53.00 L271.25 55.50 L271.88 56.62 L273.25 57.75 L274.50 57.88 L275.75 57.62 L277.00 56.75 L278.75 56.25 L280.62 54.88 L282.00 53.50 L282.50 53.25 L283.25 53.25 L283.75 53.62 L284.00 54.12 L283.88 55.88 L284.38 57.00 L284.75 57.38 L285.88 57.88 L287.38 57.88 L289.25 56.62 L290.88 56.25 L293.75 54.12 L295.25 53.25 L296.38 52.00 L297.50 51.50 L298.12 52.12 L298.25 54.38 L298.75 56.62 L299.75 58.25 L301.12 59.38 L302.12 59.62 L304.38 59.50 L305.88 58.50 L307.25 58.25 L308.75 57.25 L310.50 56.50 L311.75 55.12 L312.62 54.75 L313.38 54.75 L313.75 55.00 L314.00 55.50 L314.00 57.00 L314.25 57.62 L314.75 58.12 L316.25 58.75 L318.12 58.75 L319.88 57.75 L321.38 56.38 L322.50 55.00 L323.12 53.75 L325.25 51.38 L325.75 51.12 L326.50 51.12 L327.38 51.50 L328.88 51.50 L330.62 50.38 L333.25 49.88 L334.88 48.75 L335.38 49.25 L335.38 50.50 L335.00 52.12 L333.88 53.75 L332.25 57.12 L331.50 59.50 L330.50 61.25 L330.25 62.12 L329.25 63.38 L328.62 65.38 L327.50 66.88 L327.00 68.00 L327.12 69.88 L327.75 70.38 L328.25 70.38 L328.88 69.88 L329.62 67.50 L330.50 65.88 L330.88 64.62 L332.00 63.12 L332.62 61.62 L333.50 60.50 L334.25 58.38 L335.12 57.38 L336.12 55.12 L337.62 53.88 L338.25 53.88 L340.00 55.00 L341.25 56.12 L342.38 56.50 L346.50 56.62 L348.62 56.25 L350.50 55.12 L352.88 54.38 L353.62 53.75 L355.75 52.88 L357.00 51.88 L358.00 51.50 L359.38 50.25 L360.50 49.75 L363.38 47.12 L364.25 46.62ZM323.25 45.12 L324.00 46.00 L323.88 47.12 L323.25 47.75 L321.38 48.50 L321.12 49.00 L321.25 49.62 L322.25 50.88 L322.12 51.75 L321.00 53.00 L320.38 54.38 L319.12 55.50 L318.38 56.50 L317.75 56.75 L317.00 56.62 L316.38 55.88 L316.12 54.75 L316.25 52.62 L316.50 51.88 L317.50 50.75 L318.12 49.12 L319.75 48.12 L320.75 47.12 L321.38 45.62 L322.25 45.00ZM271.75 45.38 L271.75 46.12 L268.75 49.50 L267.88 49.88 L266.75 51.12 L265.25 52.12 L262.38 54.62 L260.25 55.88 L259.62 55.88 L258.88 55.50 L258.88 54.12 L260.25 51.75 L264.25 47.50 L265.50 46.75 L266.50 45.62 L267.00 45.38 L268.75 45.38 L271.38 45.00ZM298.50 45.75 L298.62 46.38 L298.00 47.75 L296.25 49.38 L295.38 49.88 L294.38 51.12 L293.25 51.75 L291.88 53.12 L287.88 55.88 L287.00 56.00 L286.12 55.38 L285.88 54.75 L285.88 54.00 L287.50 51.00 L288.75 49.38 L292.62 45.88 L295.00 44.88 L297.88 45.25ZM317.50 20.00 L317.88 20.38 L317.88 20.88 L317.25 22.75 L316.12 24.00 L315.50 25.25 L314.75 26.00 L313.88 27.75 L313.00 28.62 L312.25 30.12 L309.75 33.50 L309.25 34.62 L307.38 36.75 L306.75 36.88 L306.38 36.50 L306.38 35.75 L307.00 34.25 L308.00 32.75 L308.50 31.25 L309.50 30.25 L310.12 28.75 L311.12 27.62 L311.75 26.38 L312.62 25.50 L313.38 24.12 L314.38 23.12 L315.00 22.00 L316.88 20.12ZM266.50 16.62 L265.88 16.00 L263.50 15.00 L260.00 15.12 L257.50 15.50 L249.38 15.75 L247.25 16.12 L243.75 16.38 L240.62 17.00 L235.62 17.62 L226.75 18.25 L224.88 18.88 L221.75 19.00 L220.75 19.50 L220.38 20.00 L220.38 20.50 L220.88 21.00 L221.50 21.25 L223.25 21.25 L227.50 20.12 L228.62 20.12 L231.88 19.62 L236.75 19.38 L241.00 18.75 L242.12 18.75 L245.62 18.12 L249.88 18.00 L251.25 17.75 L255.12 17.75 L256.50 17.50 L259.38 17.62 L260.25 17.38 L262.62 17.25 L263.62 17.62 L264.00 18.25 L264.00 18.62 L263.50 19.25 L260.50 21.00 L259.25 22.12 L258.00 22.75 L255.12 25.12 L253.88 25.75 L252.50 27.00 L251.38 27.50 L250.12 28.62 L248.88 29.25 L244.12 33.12 L240.88 35.38 L239.62 36.62 L238.25 37.25 L230.88 43.12 L229.62 43.75 L228.38 45.00 L226.25 46.62 L225.00 48.00 L224.00 48.50 L222.25 49.88 L220.62 51.50 L219.75 51.88 L217.12 54.25 L216.38 54.62 L215.00 56.12 L214.25 56.50 L212.12 58.25 L206.38 63.50 L205.75 64.50 L205.00 65.12 L204.38 66.25 L204.38 67.62 L204.62 68.12 L205.12 68.62 L205.75 68.88 L206.62 68.62 L207.12 68.12 L207.00 66.25 L207.75 65.00 L209.50 63.50 L211.12 62.62 L212.12 61.50 L213.50 60.50 L215.62 58.50 L216.88 57.00 L217.88 56.50 L219.12 55.25 L220.38 54.62 L222.00 52.88 L223.50 51.88 L224.75 50.50 L226.00 49.75 L226.75 48.88 L227.75 48.25 L229.00 47.00 L231.50 45.25 L232.62 44.00 L234.12 43.25 L238.88 39.50 L240.88 38.38 L243.50 36.12 L244.88 35.38 L247.75 33.00 L249.12 32.25 L249.88 31.50 L251.25 30.75 L254.50 28.25 L255.62 27.75 L258.88 24.88 L262.25 22.75 L263.62 21.50 L264.50 21.12 L266.12 19.62 L266.75 18.62 L266.88 17.75ZM88.50 18.38 L87.50 17.88 L86.12 17.62 L85.50 16.88 L84.88 16.50 L82.50 16.12 L80.75 15.25 L79.25 14.88 L73.00 14.25 L68.00 14.25 L64.88 14.62 L62.50 15.12 L60.00 16.00 L57.50 16.38 L55.62 17.38 L52.75 17.88 L50.62 19.25 L48.38 19.88 L47.50 20.38 L46.25 20.75 L42.88 22.75 L41.62 23.75 L40.12 24.38 L39.00 25.50 L36.00 27.88 L35.50 28.75 L34.12 30.12 L33.25 33.12 L33.25 34.00 L33.50 34.62 L34.12 35.38 L34.62 35.62 L35.00 35.50 L35.38 34.88 L35.12 33.00 L36.12 30.75 L38.12 28.88 L38.88 27.88 L39.88 27.25 L40.88 26.25 L42.12 25.62 L43.12 24.75 L44.75 24.00 L45.88 22.88 L47.38 22.50 L48.12 22.12 L49.25 21.12 L50.88 20.75 L52.62 19.62 L55.12 19.12 L56.88 18.00 L60.75 17.88 L62.25 17.38 L63.88 17.25 L66.38 16.38 L75.50 16.12 L78.50 16.25 L80.38 16.62 L82.88 17.50 L85.12 17.75 L85.75 18.00 L86.62 19.12 L87.88 19.75 L88.50 20.38 L90.00 22.50 L90.38 23.50 L90.25 25.75 L89.38 27.12 L88.50 29.25 L85.62 32.75 L83.25 35.12 L82.50 35.50 L81.38 36.62 L80.38 37.12 L79.00 38.38 L77.50 39.12 L76.38 40.12 L74.75 40.75 L73.75 41.62 L71.88 42.38 L70.62 43.25 L68.38 43.75 L67.00 44.75 L66.25 45.00 L64.25 45.25 L61.88 46.38 L58.50 46.88 L57.25 46.88 L55.50 47.88 L51.50 48.12 L50.88 47.50 L50.88 47.12 L53.25 43.25 L53.88 41.25 L55.00 39.62 L55.25 38.00 L56.50 36.62 L57.00 35.00 L58.12 33.50 L58.62 31.75 L59.88 29.88 L60.25 28.38 L61.25 27.25 L62.25 25.12 L62.50 23.88 L62.12 23.25 L61.75 23.25 L60.62 23.88 L59.88 25.12 L59.75 26.12 L59.38 27.00 L58.50 27.75 L58.25 28.25 L58.00 29.88 L56.88 31.12 L56.38 32.88 L55.25 34.25 L54.62 36.38 L53.50 37.88 L53.12 39.50 L51.75 41.00 L51.62 42.38 L51.38 43.00 L50.12 44.25 L49.62 46.00 L48.00 46.88 L47.50 46.88 L46.12 46.38 L44.75 46.62 L43.25 47.38 L42.38 48.50 L42.25 49.25 L42.62 50.12 L43.25 50.75 L44.50 51.50 L45.00 52.12 L45.00 53.50 L43.12 57.25 L42.50 58.00 L41.50 60.38 L40.75 61.50 L40.00 63.62 L39.00 65.00 L38.38 67.12 L37.50 68.12 L37.00 69.12 L36.62 70.50 L36.62 71.50 L37.00 72.00 L38.12 72.00 L38.75 71.50 L39.12 70.62 L39.38 69.25 L40.50 67.38 L41.00 65.25 L41.62 64.38 L42.62 62.12 L43.50 61.00 L44.12 59.50 L45.25 58.00 L45.88 56.50 L46.75 55.25 L47.38 53.62 L49.50 51.50 L50.38 51.50 L51.25 51.88 L52.38 53.25 L54.62 55.00 L56.25 56.62 L59.38 59.25 L60.75 60.00 L61.75 61.12 L62.75 61.62 L63.88 62.62 L65.38 63.25 L66.38 64.12 L67.50 64.62 L69.38 66.00 L71.75 66.50 L73.00 67.62 L75.50 68.00 L77.00 68.75 L78.25 69.12 L81.25 69.12 L84.00 68.62 L84.88 67.88 L86.62 67.75 L87.50 67.12 L87.62 66.75 L87.25 66.38 L86.50 66.38 L85.50 66.88 L84.75 68.00 L80.00 67.88 L77.38 67.50 L74.50 66.25 L72.38 65.88 L71.25 64.88 L69.62 64.38 L68.12 63.25 L66.75 62.62 L65.75 61.62 L64.75 61.12 L63.50 60.00 L62.00 59.38 L60.75 58.00 L59.88 57.50 L57.38 54.88 L54.25 52.88 L53.38 51.75 L53.25 50.88 L54.25 50.25 L56.25 50.12 L58.38 49.50 L59.75 48.88 L62.38 48.50 L64.62 47.25 L67.38 46.62 L68.38 45.75 L69.12 45.38 L71.38 44.88 L72.62 44.12 L74.62 43.38 L75.75 42.50 L77.62 41.62 L78.62 40.88 L79.62 40.50 L82.62 38.38 L83.38 37.62 L84.50 37.00 L87.25 34.12 L88.50 32.62 L89.12 31.50 L90.25 30.38 L92.00 26.38 L92.12 24.50 L91.88 22.75 L91.50 22.00 L90.50 20.88 L90.12 20.00ZM46.00 48.75 L46.75 48.75 L47.12 49.12 L47.00 49.62 L46.50 50.12 L45.88 50.12 L45.50 49.75 L45.50 49.25Z"/><path fill="#f1ece4" fill-rule="evenodd" d="M97.38 79.00 L96.88 79.38 L96.62 80.12 L96.88 81.12 L96.62 82.75 L96.88 84.38 L96.88 85.75 L96.62 86.88 L96.75 88.00 L97.38 88.75 L97.88 89.00 L101.88 89.00 L102.38 88.75 L102.62 88.38 L102.62 88.00 L102.25 87.62 L99.62 87.50 L98.75 86.75 L98.50 86.25 L98.50 83.00 L98.25 81.88 L98.38 80.00 L98.12 79.38ZM268.50 78.88 L267.75 79.62 L267.75 87.38 L268.00 88.12 L268.75 88.50 L269.38 88.00 L269.75 87.00 L269.75 80.12 L269.50 79.38 L269.12 79.00ZM241.62 78.88 L240.88 78.88 L240.25 79.88 L240.38 85.00 L240.12 85.88 L239.25 87.00 L238.25 87.50 L237.12 87.50 L235.88 86.50 L235.50 85.62 L235.25 84.25 L235.25 83.00 L235.62 80.62 L235.50 79.62 L235.00 79.00 L234.38 79.00 L233.88 79.50 L233.88 86.25 L234.00 87.12 L234.62 88.12 L236.50 89.00 L239.50 89.00 L240.25 88.62 L241.50 87.50 L242.00 86.62 L242.12 79.62ZM176.50 78.88 L176.00 79.62 L176.12 80.25 L177.62 81.75 L179.00 85.25 L179.12 88.00 L179.50 88.50 L180.00 88.50 L180.38 88.00 L180.25 85.75 L180.75 84.00 L181.38 82.62 L183.12 80.25 L183.25 79.50 L182.88 79.12 L182.12 79.12 L181.25 79.75 L180.62 81.25 L180.00 81.75 L179.50 81.75 L178.62 81.12 L177.25 79.00ZM147.25 78.75 L146.62 79.38 L145.50 81.38 L145.25 83.00 L144.00 84.75 L143.75 86.25 L143.12 87.88 L143.50 88.38 L144.38 88.38 L146.38 87.00 L149.00 86.88 L149.62 87.12 L150.62 88.50 L151.38 88.62 L151.88 88.00 L151.88 87.38 L150.38 84.12 L149.88 81.50 L148.50 79.00 L147.75 78.62ZM147.38 82.25 L148.12 82.38 L148.62 83.38 L148.50 84.38 L148.25 84.88 L147.75 85.25 L147.00 85.12 L146.62 84.75 L146.38 84.00 L146.75 82.88ZM112.50 78.50 L111.75 79.00 L111.38 79.88 L111.25 83.75 L111.50 88.00 L111.75 88.50 L112.38 89.00 L116.88 89.00 L117.38 88.50 L117.38 88.00 L117.12 87.62 L116.38 87.38 L114.00 87.25 L113.38 86.75 L113.12 85.75 L113.38 85.12 L114.25 84.50 L116.25 84.38 L116.88 84.12 L117.12 83.88 L117.25 83.25 L116.88 82.75 L114.12 82.38 L113.38 81.75 L113.25 81.38 L113.75 80.62 L114.50 80.25 L117.12 80.00 L117.38 79.75 L117.38 79.25 L117.00 78.75 L115.75 78.38ZM251.88 78.50 L251.12 79.12 L250.75 80.00 L250.62 87.88 L250.88 88.38 L252.12 89.12 L254.88 89.12 L257.38 88.50 L257.88 88.12 L259.25 86.12 L259.62 85.00 L259.62 83.75 L259.12 81.38 L257.88 79.62 L256.88 78.88 L253.50 78.25ZM254.12 80.12 L255.25 80.25 L256.12 80.88 L257.38 82.50 L257.75 83.38 L257.75 84.38 L257.25 85.38 L255.75 87.00 L254.62 87.50 L253.75 87.25 L252.88 85.88 L253.00 81.88 L253.50 80.75ZM224.62 78.25 L219.75 78.25 L219.12 78.50 L218.62 79.00 L218.62 79.62 L220.12 80.12 L221.00 81.38 L220.88 87.25 L221.25 88.38 L221.75 88.62 L222.25 88.50 L222.75 87.88 L222.62 83.75 L222.88 81.25 L223.75 80.25 L225.00 79.88 L225.38 79.38 L225.25 78.75ZM205.88 78.00 L203.75 79.12 L203.25 79.62 L202.88 80.62 L202.88 81.62 L203.38 82.62 L204.12 83.50 L205.38 84.12 L206.50 84.38 L207.50 85.12 L207.75 85.62 L207.75 86.62 L207.38 87.12 L206.50 87.50 L205.75 87.50 L204.50 87.00 L203.88 87.00 L203.38 87.38 L203.38 88.12 L204.12 88.88 L207.00 89.12 L208.88 88.50 L209.62 87.75 L210.12 86.75 L210.25 85.88 L209.88 84.62 L209.38 84.00 L207.50 82.62 L205.75 82.25 L205.00 81.75 L205.00 81.00 L205.25 80.50 L206.00 79.88 L207.25 79.88 L208.00 80.25 L208.88 80.25 L209.12 80.00 L209.12 79.50 L208.62 79.00 L206.88 78.12ZM282.62 77.88 L279.50 79.25 L278.88 79.88 L277.62 82.12 L277.50 84.75 L278.00 86.12 L279.38 88.12 L280.25 88.62 L283.12 89.38 L285.62 88.62 L286.62 87.88 L288.00 85.12 L288.12 82.88 L287.62 81.50 L286.25 79.38 L283.50 78.00ZM282.38 80.00 L283.38 80.12 L285.00 80.88 L285.75 81.88 L286.12 83.50 L286.00 84.62 L285.25 86.25 L284.62 86.88 L283.25 87.50 L282.12 87.50 L281.25 87.12 L280.25 86.12 L279.38 84.38 L279.38 83.25 L280.75 81.12 L281.50 80.38ZM163.50 77.88 L161.25 79.12 L159.88 80.62 L159.50 81.62 L159.25 84.38 L159.88 86.75 L161.50 88.62 L163.62 89.50 L164.62 89.50 L167.00 88.50 L167.38 88.00 L167.38 87.50 L166.88 87.00 L166.00 87.00 L164.62 87.62 L163.88 87.75 L162.38 86.75 L161.62 85.62 L161.38 84.25 L161.50 82.38 L162.00 81.25 L163.88 79.88 L164.75 79.88 L165.88 80.50 L166.88 80.62 L167.38 80.25 L167.50 79.75 L167.12 79.12 L166.00 78.75 L164.50 77.88ZM131.38 77.88 L130.38 77.88 L128.12 78.88 L126.38 81.00 L126.00 81.88 L126.12 85.50 L126.38 86.25 L128.12 88.50 L130.25 89.38 L133.75 88.62 L135.00 87.50 L135.50 86.00 L135.25 84.50 L134.62 83.88 L134.00 83.62 L132.62 83.62 L131.88 84.12 L131.88 84.75 L133.00 86.12 L133.00 86.50 L132.38 87.25 L131.12 87.75 L129.75 87.12 L128.00 85.12 L127.75 84.50 L127.75 83.38 L128.00 82.38 L128.38 81.62 L130.12 79.88 L130.88 79.50 L131.38 79.50 L132.88 80.50 L133.75 80.50 L134.38 80.00 L134.38 79.50 L133.88 79.00Z"/></svg>
+    </a>
+    <nav class="links" aria-label="קישורי תחתית">
+      <a href="catalog.html">קטלוג</a>
+      <a href="about.html">אודות</a>
+      <a href="contact.html">צור קשר</a>
+      <a href="terms.html">תקנון</a>
+      <a href="accessibility.html">הצהרת נגישות</a>
+    </nav>
+    <div class="contact">
+      <a href="tel:+972543373308"><svg viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg><span dir="ltr">054-3373308</span></a>
+      <a href="https://wa.me/972543373308" target="_blank" rel="noopener" aria-label="וואטסאפ"><svg viewBox="0 0 24 24"><path d="M3.5 20.5l1.3-4.3A8.5 8.5 0 1 1 8 19.3z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.5-2-1-1 .8a5 5 0 0 1-2.3-2.3l.8-1-1-2z"/></svg></a>
+      <a href="mailto:zadokronen@gmail.com" aria-label="מייל"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+      <a href="https://www.instagram.com/ronentzadok/" target="_blank" rel="noopener" aria-label="אינסטגרם"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".9"/></svg></a>
+    </div>
+    <div class="copy">© 2026 Ronen Zadok – Legacy Studio. כל הזכויות שמורות.</div>
+  </div>
+</footer>
+
+<a class="fab" href="https://wa.me/972543373308" target="_blank" rel="noopener" aria-label="שלחו הודעת וואטסאפ">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>
+</a>
+
+
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const EMAIL = "zadokronen@gmail.com", WA = "https://wa.me/972543373308";
+const toast = (t) => { const el=document.getElementById('toast'); el.textContent=t; el.classList.add('show'); clearTimeout(el._t); el._t=setTimeout(()=>el.classList.remove('show'),2200); };
+document.querySelectorAll('[data-copy]').forEach(b => b.addEventListener('click', async () => {
+  try { await navigator.clipboard.writeText(b.dataset.copy); toast('הועתק ✓'); }
+  catch(e) { toast(b.dataset.copy); }
+}));
+document.querySelectorAll('[data-send]').forEach(b => b.addEventListener('click', () => {
+  const f = document.getElementById('cf'), err = document.getElementById('err');
+  const name = f.name.value.trim(), phone = f.phone.value.trim(), topic = f.topic.value, msg = f.message.value.trim();
+  if (!name || !msg) { err.textContent = 'נא למלא שם והודעה'; (name ? f.message : f.name).focus(); return; }
+  err.textContent = '';
+  const body = "שם: " + name + (phone ? "\nטלפון: " + phone : "") + "\nנושא: " + topic + "\n\n" + msg;
+  if (b.dataset.send === 'wa') window.open(WA + "?text=" + encodeURIComponent(body), "_blank", "noopener");
+  else location.href = "mailto:" + EMAIL + "?subject=" + encodeURIComponent("פנייה מהאתר – " + topic) + "&body=" + encodeURIComponent(body);
+}));
+</script>
+
+<script>
+(function(){const h=document.querySelector('header.sh'),b=h&&h.querySelector('.sh-burger');if(!b)return;
+const set=o=>{h.classList.toggle('open',o);b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'סגירת תפריט':'פתיחת תפריט');};
+b.addEventListener('click',()=>set(!h.classList.contains('open')));
+h.querySelectorAll('.sh-nav a').forEach(a=>a.addEventListener('click',()=>set(false)));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')set(false)});
+window.addEventListener('resize',()=>{if(innerWidth>900)set(false)});})();
+</script>
+</body>
+</html>
